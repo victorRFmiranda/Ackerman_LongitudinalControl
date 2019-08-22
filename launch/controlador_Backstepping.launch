@@ -1,0 +1,7 @@
+<launch>
+
+	<node pkg="longitudinal_control" type="save_data.py" name="saveFile" />
+	<node pkg="longitudinal_control" type="backsteppingIntegral.py" name="Controller" />
+	<!--node pkg="longitudinal_control" type="backstepping.py" name="Controller" /-->
+	<node pkg="longitudinal_control" type="trajectory" name="trajectory_planner" />
+</launch>

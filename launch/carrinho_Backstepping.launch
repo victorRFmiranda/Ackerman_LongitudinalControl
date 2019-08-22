@@ -1,0 +1,7 @@
+<launch>
+	
+	<node pkg="longitudinal_control" type="runArduino.py" name="Encoder" />
+
+	<node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="10 longitudinal_control controlador_Backstepping.launch" name="timed_roslaunch" output="screen" />
+
+</launch>
